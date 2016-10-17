@@ -1,0 +1,492 @@
+security:
+    login:
+        page_title: 'Добро пожаловать в wallabag!'
+        keep_logged_in: 'Запомнить меня'
+        forgot_password: 'Восстановить пароль'
+        submit: 'Войти'
+        register: 'Регистрация'
+        username: 'Имя пользователя'
+        password: 'Пароль'
+        cancel: 'Отмена'
+    resetting:
+        description: "Введите ваш email ниже и мы вышлем вам инструкциюя по восстановлению пароля."
+    register:
+        page_title: 'Создать учетную запись'
+        go_to_account: 'Перейти в учётную запись'
+
+menu:
+    left:
+        unread: 'Unread'
+        starred: 'Starred'
+        archive: 'Архив'
+        all_articles: 'All entries'
+        config: 'Config'
+        tags: 'Тэги'
+        internal_settings: 'Internal Settings'
+        import: 'Импорт'
+        howto: 'How to'
+        developer: 'Developer'
+        logout: 'Выход'
+        about: 'О Wallabag'
+        search: 'Поиск'
+        save_link: 'Сохранить ссылку'
+        back_to_unread: 'Возврат к непрочитанным статьям'
+        users_management: 'Управление пользователями'
+    top:
+        add_new_entry: 'Add a new entry'
+        search: 'Поиск'
+        filter_entries: 'Filter entries'
+        export: 'Экспорт'
+    search_form:
+        input_label: 'Введите поисковый запрос в это поле'
+
+footer:
+    wallabag:
+        elsewhere: 'Take wallabag with you'
+        social: 'Social'
+        powered_by: 'powered by'
+        about: 'About'
+    stats: Since %user_creation% you read %nb_archives% articles. That is about %per_day% a day!
+
+config:
+    page_title: 'Настройки'
+    tab_menu:
+        settings: 'Общие настройки'
+        rss: 'RSS'
+        user_info: 'Информация о пользователе'
+        password: 'Пароль'
+        rules: 'Правила для тегов'
+        new_user: 'Добавить пользователя'
+    form:
+        save: 'Сохранить'
+    form_settings:
+        theme_label: 'Тема'
+        items_per_page_label: 'Элементов на странице'
+        language_label: 'Язык'
+        reading_speed:
+            label: 'Скорость чтения'
+            help_message: 'Для определения скорости чтения вы можете использовать следующим ресурсом:'
+            100_word: 'Я могу прочесть ~100 слов за минуту'
+            200_word: 'Я могу прочесть ~200 слов за минуту'
+            300_word: 'Я могу прочесть ~300 слов за минуту'
+            400_word: 'Я могу прочесть ~400 слов за минуту'
+        pocket_consumer_key_label: 'Consumer key от сервиса Pocket для импорта контента'
+    form_rss:
+        description: 'RSS feeds provided by wallabag allow you to read your saved articles with your favourite RSS reader. You need to generate a token first.'
+        token_label: 'RSS токен'
+        no_token: 'Токен отсутствует'
+        token_create: 'Создать токен'
+        token_reset: 'Сменить токен'
+        rss_links: 'RSS ссылки'
+        rss_link:
+            unread: 'unread'
+            starred: 'starred'
+            archive: 'archived'
+        rss_limit: 'Максимальное число элеметов в RSS-ленте'
+    form_user:
+        two_factor_description: "Enabling two factor authentication means you'll receive an email with a code on every new untrusted connection."
+        name_label: 'Имя'
+        email_label: 'Эл.почта'
+        twoFactorAuthentication_label: 'Двух-факторная аутентификация'
+    form_password:
+        old_password_label: 'Текущий пароль'
+        new_password_label: 'Новый пароль'
+        repeat_new_password_label: 'Повторите новый пароль'
+    form_rules:
+        if_label: 'if'
+        then_tag_as_label: 'then tag as'
+        delete_rule_label: 'delete'
+        edit_rule_label: 'edit'
+        rule_label: 'Rule'
+        tags_label: 'Tags'
+        faq:
+            title: 'FAQ'
+            tagging_rules_definition_title: 'What does « tagging rules » mean?'
+            tagging_rules_definition_description: 'They are rules used by Wallabag to automatically tag new entries.<br />Each time a new entry is added, all the tagging rules will be used to add the tags you configured, thus saving you the trouble of manually classifying your entries.'
+            how_to_use_them_title: 'How do I use them?'
+            how_to_use_them_description: 'Let us assume you want to tag new entries as « <i>short reading</i> » when the reading time is under 3 minutes.<br />In that case, you should put « readingTime &lt;= 3 » in the <i>Rule</i> field and « <i>short reading</i> » in the <i>Tags</i> field.<br />Several tags can added simultaneously by separating them with a comma: « <i>short reading, must read</i> »<br />Complex rules can be written by using predefined operators: if « <i>readingTime &gt;= 5 AND domainName = "github.com"</i> » then tag as « <i>long reading, github </i> »'
+            variables_available_title: 'Which variables and operators can I use to write rules?'
+            variables_available_description: 'The following variables and operators can be used to create tagging rules:'
+            meaning: 'Meaning'
+            variable_description:
+                label: 'Variable'
+                title: 'Title of the entry'
+                url: 'URL of the entry'
+                isArchived: 'Whether the entry is archived or not'
+                isStarred: 'Whether the entry is starred or not'
+                content: "The entry's content"
+                language: "The entry's language"
+                mimetype: "The entry's mime-type"
+                readingTime: "The estimated entry's reading time, in minutes"
+                domainName: 'The domain name of the entry'
+            operator_description:
+                label: 'Operator'
+                less_than: 'Less than...'
+                strictly_less_than: 'Strictly less than...'
+                greater_than: 'Greater than...'
+                strictly_greater_than: 'Strictly greater than...'
+                equal_to: 'Equal to...'
+                not_equal_to: 'Not equal to...'
+                or: 'One rule OR another'
+                and: 'One rule AND another'
+                matches: 'Tests that a <i>subject</i> is matches a <i>search</i> (case-insensitive).<br />Example: <code>title matches "football"</code>'
+
+entry:
+    page_titles:
+        unread: 'Unread entries'
+        starred: 'Starred entries'
+        archived: 'Archived entries'
+        filtered: 'Filtered entries'
+        filtered_tags: 'Filtered by tags'
+        untagged: 'Untagged entries'
+    list:
+        number_on_the_page: '{0} There are no entries.|{1} There is one entry.|]1,Inf[ There are %count% entries.'
+        reading_time: 'estimated reading time'
+        reading_time_minutes: 'estimated reading time: %readingTime% min'
+        reading_time_less_one_minute: 'estimated reading time: <small class="inferieur">&lt;</small> 1 min'
+        number_of_tags: '{1}and one other tag|]1,Inf[and %count% other tags'
+        reading_time_minutes_short: '%readingTime% min'
+        reading_time_less_one_minute_short: '<small class="inferieur">&lt;</small> 1 min'
+        original_article: 'original'
+        toogle_as_read: 'Toggle mark as read'
+        toogle_as_star: 'Toggle starred'
+        delete: 'Delete'
+        export_title: 'Export'
+    filters:
+        title: 'Filters'
+        status_label: 'Status'
+        archived_label: 'Archived'
+        starred_label: 'Starred'
+        unread_label: 'Unread'
+        preview_picture_label: 'Has a preview picture'
+        preview_picture_help: 'Preview picture'
+        language_label: 'Language'
+        reading_time:
+            label: 'Reading time in minutes'
+            from: 'from'
+            to: 'to'
+        domain_label: 'Domain name'
+        created_at:
+            label: 'Creation date'
+            from: 'from'
+            to: 'to'
+        action:
+            clear: 'Clear'
+            filter: 'Filter'
+    view:
+        left_menu:
+            back_to_top: 'Back to top'
+            back_to_homepage: 'Back'
+            set_as_read: 'Mark as read'
+            set_as_unread: 'Mark as unread'
+            set_as_starred: 'Toggle starred'
+            view_original_article: 'Original article'
+            re_fetch_content: 'Re-fetch content'
+            delete: 'Delete'
+            add_a_tag: 'Add a tag'
+            share_content: 'Share'
+            share_email_label: 'Email'
+            public_link: 'public link'
+            delete_public_link: 'delete public link'
+            download: 'Download'
+            print: 'Print'
+            problem:
+                label: 'Problems?'
+                description: 'Does this article appear wrong?'
+        edit_title: 'Edit title'
+        original_article: 'original'
+        annotations_on_the_entry: '{0} No annotations|{1} One annotation|]1,Inf[ %count% annotations'
+        created_at: 'Creation date'
+    new:
+        page_title: 'Save new entry'
+        placeholder: 'http://website.com'
+        form_new:
+            url_label: Url
+    edit:
+        page_title: 'Edit an entry'
+        title_label: 'Title'
+        url_label: 'Url'
+        is_public_label: 'Public'
+        save_label: 'Save'
+    public:
+        shared_by_wallabag: "This article has been shared by <a href='%wallabag_instance%'>wallabag</a>"
+
+about:
+    page_title: 'About'
+    top_menu:
+        who_behind_wallabag: 'Who is behind wallabag'
+        getting_help: 'Getting help'
+        helping: 'Helping wallabag'
+        contributors: 'Contributors'
+        third_party: 'Third-party libraries'
+    who_behind_wallabag:
+        developped_by: 'Developed by'
+        website: 'website'
+        many_contributors: 'And many others contributors ♥ <a href="https://github.com/wallabag/wallabag/graphs/contributors">on Github</a>'
+        project_website: 'Project website'
+        license: 'License'
+        version: 'Version'
+    getting_help:
+        documentation: 'Documentation'
+        bug_reports: 'Bug reports'
+        support: '<a href="https://support.wallabag.org">On our support website</a> or <a href="https://github.com/wallabag/wallabag/issues">on GitHub</a>'
+    helping:
+        description: 'wallabag is free and open source. You can help us:'
+        by_contributing: 'by contributing to the project:'
+        by_contributing_2: 'an issue lists all our needs'
+        by_paypal: 'via Paypal'
+    contributors:
+        description: 'Thank you to contributors on wallabag web application'
+    third_party:
+        description: 'Here is the list of third-party libraries used in wallabag (with their licenses):'
+        package: 'Package'
+        license: 'License'
+
+howto:
+    page_title: 'How to'
+    page_description: 'There are several ways to save an article:'
+    top_menu:
+        browser_addons: 'Browser addons'
+        mobile_apps: 'Mobile apps'
+        bookmarklet: 'Bookmarklet'
+    form:
+        description: 'Thanks to this form'
+    browser_addons:
+        firefox: 'Standard Firefox Add-On'
+        chrome: 'Chrome Extension'
+    mobile_apps:
+        android:
+            via_f_droid: 'via F-Droid'
+            via_google_play: 'via Google Play'
+        ios: 'on the iTunes Store'
+        windows: 'on the Microsoft Store'
+    bookmarklet:
+        description: 'Drag & drop this link to your bookmarks bar:'
+
+quickstart:
+    page_title: 'Quickstart'
+    more: 'More…'
+    intro:
+        title: 'Welcome to wallabag!'
+        paragraph_1: "We'll accompany you on your visit to wallabag and show you some features that might interest you."
+        paragraph_2: 'Follow us!'
+    configure:
+        title: 'Configure the application'
+        description: 'In order to have an application which suits you, have a look into the configuration of wallabag.'
+        language: 'Change language and design'
+        rss: 'Enable RSS feeds'
+        tagging_rules: 'Write rules to automatically tag your articles'
+    admin:
+        title: 'Administration'
+        description: 'As an administrator, you have privileges on wallabag. You can:'
+        new_user: 'Create a new user'
+        analytics: 'Configure analytics'
+        sharing: 'Enable some parameters about article sharing'
+        export: 'Configure export'
+        import: 'Configure import'
+    first_steps:
+        title: 'First steps'
+        description: "Now wallabag is well configured, it's time to archive the web. You can click on the top right sign + to add a link."
+        new_article: 'Save your first article'
+        unread_articles: 'And classify it!'
+    migrate:
+        title: 'Migrate from an existing service'
+        description: "Are you using another service? We'll help you to retrieve your data on wallabag."
+        pocket: 'Migrate from Pocket'
+        wallabag_v1: 'Migrate from wallabag v1'
+        wallabag_v2: 'Migrate from wallabag v2'
+        readability: 'Migrate from Readability'
+        instapaper: 'Migrate from Instapaper'
+    developer:
+        title: 'Developers'
+        description: 'We also thought to the developers: Docker, API, translations, etc.'
+        create_application: 'Create your third application'
+        use_docker: 'Use Docker to install wallabag'
+    docs:
+        title: 'Full documentation'
+        description: "There are so much features in wallabag. Don't hesitate to read the manual to know them and to learn how to use them."
+        annotate: 'Annotate your article'
+        export: 'Convert your articles into ePUB or PDF'
+        search_filters: 'See how you can look for an article by using the search engine and filters'
+        fetching_errors: 'What can I do if an article encounters errors during fetching?'
+        all_docs: 'And so many other articles!'
+    support:
+        title: 'Support'
+        description: 'If you need some help, we are here for you.'
+        github: 'On GitHub'
+        email: 'By email'
+        gitter: 'On Gitter'
+
+tag:
+    page_title: 'Tags'
+    list:
+        number_on_the_page: '{0} There are no tags.|{1} There is one tag.|]1,Inf[ There are %count% tags.'
+        see_untagged_entries: 'See untagged entries'
+
+import:
+    page_title: 'Import'
+    page_description: 'Welcome to wallabag importer. Please select your previous service from which you want to migrate.'
+    action:
+        import_contents: 'Import contents'
+    form:
+        mark_as_read_title: 'Mark all as read?'
+        mark_as_read_label: 'Mark all imported entries as read'
+        file_label: 'File'
+        save_label: 'Upload file'
+    pocket:
+        page_title: 'Import > Pocket'
+        description: "This importer will import all of your Pocket data. Pocket doesn't allow us to retrieve content from their service, so the readable content of each article will be re-fetched by wallabag."
+        config_missing:
+            description: "Pocket import isn't configured."
+            admin_message: 'You need to define %keyurls%a pocket_consumer_key%keyurle%.'
+            user_message: 'Your server admin needs to define an API Key for Pocket.'
+        authorize_message: 'You can import your data from your Pocket account. You just have to click on the below button and authorize the application to connect to getpocket.com.'
+        connect_to_pocket: 'Connect to Pocket and import data'
+    wallabag_v1:
+        page_title: 'Import > Wallabag v1'
+        description: 'This importer will import all your wallabag v1 articles. On your config page, click on "JSON export" in the "Export your wallabag data" section. You will have a "wallabag-export-1-xxxx-xx-xx.json" file.'
+        how_to: 'Please select your wallabag export and click on the below button to upload and import it.'
+    wallabag_v2:
+        page_title: 'Import > Wallabag v2'
+        description: 'This importer will import all your wallabag v2 articles. Go to All articles, then, on the export sidebar, click on "JSON". You will have a "All articles.json" file.'
+    readability:
+        page_title: 'Import > Readability'
+        description: 'This importer will import all your Readability articles. On the tools (https://www.readability.com/tools/) page, click on "Export your data" in the "Data Export" section. You will received an email to download a json (which does not end with .json in fact).'
+        how_to: 'Please select your Readability export and click on the below button to upload and import it.'
+    worker:
+        enabled: "Import is made asynchronously. Once the import task is started, an external worker will handle jobs one at a time. The current service is:"
+    firefox:
+        page_title: 'Import > Firefox'
+        description: "This importer will import all your Firefox bookmarks. Just go to your bookmarks (Ctrl+Maj+O), then into \"Import and backup\", choose \"Backup...\". You will obtain a .json file."
+        how_to: "Please choose the bookmark backup file and click on the button below to import it. Note that the process may take a long time since all articles have to be fetched."
+    chrome:
+        page_title: 'Import > Chrome'
+        description: "This importer will import all your Chrome bookmarks. The location of the file depends on your operating system : <ul><li>On Linux, go into the <code>~/.config/chromium/Default/</code> directory</li><li>On Windows, it should be at <code>%LOCALAPPDATA%\\Google\\Chrome\\User Data\\Default</code></li><li>On OS X, it should be at <code>~/Library/Application Support/Google/Chrome/Default/Bookmarks</code></li></ul>Once you got there, copy the <code>Bookmarks</code> file someplace you'll find.<em><br>Note that if you have Chromium instead of Chrome, you'll have to correct paths accordingly.</em></p>"
+        how_to: "Please choose the bookmark backup file and click on the button below to import it. Note that the process may take a long time since all articles have to be fetched."
+    instapaper:
+        page_title: 'Import > Instapaper'
+        description: 'This importer will import all your Instapaper articles. On the settings (https://www.instapaper.com/user) page, click on "Download .CSV file" in the "Export" section. A CSV file will be downloaded (like "instapaper-export.csv").'
+        how_to: 'Please select your Instapaper export and click on the below button to upload and import it.'
+
+developer:
+    page_title: 'Developer'
+    welcome_message: 'Welcome to the wallabag API'
+    documentation: 'Documentation'
+    how_to_first_app: 'How to create my first application'
+    full_documentation: 'View full API documentation'
+    list_methods: 'List API methods'
+    clients:
+        title: 'Clients'
+        create_new: 'Create a new client'
+    existing_clients:
+        title: 'Existing clients'
+        field_id: 'Client ID'
+        field_secret: 'Client secret'
+        field_uris: 'Redirect URIs'
+        field_grant_types: 'Grant type allowed'
+        no_client: 'No client yet.'
+    remove:
+        warn_message_1: 'You have the ability to remove the client %name%. This action is IRREVERSIBLE !'
+        warn_message_2: "If you remove it, every app configured with that client won't be able to auth on your wallabag."
+        action: 'Remove the client %name%'
+    client:
+        page_title: 'Developer > New client'
+        page_description: 'You are about to create a new client. Please fill the field below for the redirect URI of your application.'
+        form:
+            name_label: 'Name of the client'
+            redirect_uris_label: 'Redirect URIs (optional)'
+            save_label: 'Create a new client'
+        action_back: 'Back'
+    client_parameter:
+        page_title: 'Developer > Client parameters'
+        page_description: 'Here are your client parameters.'
+        field_name: 'Client name'
+        field_id: 'Client ID'
+        field_secret: 'Client secret'
+        back: 'Back'
+        read_howto: 'Read the howto "Create my first application"'
+    howto:
+        page_title: 'Developer > How to create my first application'
+        description:
+            paragraph_1: 'The following commands make use of the <a href="https://github.com/jkbrzt/httpie">HTTPie library</a>. Make sure it is installed on your system before using it.'
+            paragraph_2: 'You need a token to communicate between your 3rd application and wallabag API.'
+            paragraph_3: 'To create this token, you need <a href="%link%">to create a new client</a>.'
+            paragraph_4: 'Now, create your token (replace client_id, client_secret, username and password with the good values):'
+            paragraph_5: 'The API will return a response like this:'
+            paragraph_6: 'The access_token is useful to do a call to the API endpoint. For example:'
+            paragraph_7: 'This call will return all the entries for your user.'
+            paragraph_8: 'If you want to see all the API endpoints, you can have a look <a href="%link%">to our API documentation</a>.'
+        back: 'Back'
+
+user:
+    page_title: 'Управление пользователями'
+    new_user: 'Создание пользователя'
+    edit_user: 'Изменение пользователя'
+    description: "В данном разделе вам доступно управление пользователями (создание, изменение и удаление)"
+    list:
+        actions: 'Действие'
+        edit_action: 'Изменить'
+        yes: 'Да'
+        no: 'Нет'
+        create_new_one: 'Создать нового пользователя'
+    form:
+        username_label: 'Username'
+        name_label: 'Имя'
+        password_label: 'Пароль'
+        repeat_new_password_label: 'Повторите новый пароль'
+        plain_password_label: '????'
+        email_label: 'Эл.почта'
+        enabled_label: 'Активирован'
+        locked_label: 'Заблокирован'
+        last_login_label: 'Последний вход'
+        twofactor_label: 'Двухфакторная аутентификация'
+        save: 'Сохранить'
+        delete: 'Удалить'
+        delete_confirm: 'Вы уверена'
+        back_to_list: 'Вернуться к списку'
+
+flashes:
+    config:
+        notice:
+            config_saved: 'Config saved. Some parameters will be considered after disconnection.'
+            password_updated: 'Password updated'
+            password_not_updated_demo: "In demonstration mode, you can't change password for this user."
+            user_updated: 'Information updated'
+            rss_updated: 'RSS information updated'
+            tagging_rules_updated: 'Tagging rules updated'
+            tagging_rules_deleted: 'Tagging rule deleted'
+            rss_token_updated: 'RSS token updated'
+    entry:
+        notice:
+            entry_already_saved: 'Entry already saved on %date%'
+            entry_saved: 'Entry saved'
+            entry_saved_failed: 'Entry saved but fetching content failed'
+            entry_updated: 'Entry updated'
+            entry_reloaded: 'Entry reloaded'
+            entry_reloaded_failed: 'Entry reloaded but fetching content failed'
+            entry_archived: 'Entry archived'
+            entry_unarchived: 'Entry unarchived'
+            entry_starred: 'Entry starred'
+            entry_unstarred: 'Entry unstarred'
+            entry_deleted: 'Entry deleted'
+    tag:
+        notice:
+            tag_added: 'Tag added'
+    import:
+        notice:
+            failed: 'Import failed, please try again.'
+            failed_on_file: 'Error while processing import. Please verify your import file.'
+            summary: 'Import summary: %imported% imported, %skipped% already saved.'
+            summary_with_queue: 'Import summary: %queued% queued.'
+        error:
+            redis_enabled_not_installed: Redis is enabled for handle asynchronous import but it looks like <u>we can't connect to it</u>. Please check Redis configuration.
+            rabbit_enabled_not_installed: RabbitMQ is enabled for handle asynchronous import but it looks like <u>we can't connect to it</u>. Please check RabbitMQ configuration.
+    developer:
+        notice:
+            client_created: 'Создан новый клиент: %name%'
+            client_deleted: 'Клиент %name% удален.'
+    user:
+        notice:
+            added: 'Пользователь "%username%" добавлен'
+            updated: 'Пользователь "%username%" обновлён'
+            deleted: 'Пользователь "%username%" удалён'
